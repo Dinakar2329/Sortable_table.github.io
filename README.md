@@ -28,7 +28,7 @@ Include the sortable.css file in the `<head>` section of your HTML file to apply
 Create the HTML table structure in the `<body>` section of your HTML file. Add the `sortable` class to the table headers (`<th>`) that you want to make sortable. Use the `data-type` attribute to specify the data type of each sortable column (e.g., `"text"`, `"number"`, `"date"`).
 
 ```html
-<table id="sortable-table">
+<table class="sortable-table">
     <thead>
         <tr>
             <th class="sortable" data-type="text">Name</th>
