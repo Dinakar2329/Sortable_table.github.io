@@ -1,5 +1,5 @@
        document.addEventListener("DOMContentLoaded", function () {
-            const table = document.getElementById("sortable-table");
+            const table = document.querySelectorAll("sortable-table");
             const headers = table.querySelectorAll(".sortable");
 
             headers.forEach(header => {
