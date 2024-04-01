@@ -1,4 +1,4 @@
-     document.addEventListener("DOMContentLoaded", function () {
+       document.addEventListener("DOMContentLoaded", function () {
             const table = document.getElementById("sortable-table");
             const headers = table.querySelectorAll(".sortable");
 
@@ -13,11 +13,24 @@
                         let aValue = a.cells[column].textContent.trim();
                         let bValue = b.cells[column].textContent.trim();
 
-                        if (type === "number") {
-                            aValue = parseFloat(aValue);
-                            bValue = parseFloat(bValue);
+                        // Convert values based on data type
+                        switch (type) {
+                            case "text":
+                                aValue = aValue.toLowerCase();
+                                bValue = bValue.toLowerCase();
+                                break;
+                            case "number":
+                                aValue = parseFloat(aValue);
+                                bValue = parseFloat(bValue);
+                                break;
+                            case "date":
+                                aValue = new Date(aValue);
+                                bValue = new Date(bValue);
+                                break;
+                            // Add additional cases for other data types as needed
+                            default:
+                                break;
                         }
-
                         if (ascending) {
                             return aValue > bValue ? 1 : -1;
                         } else {
