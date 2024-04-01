@@ -20,7 +20,7 @@ The Sortable Table CDN provides a customizable and accessible solution for imple
 Include the sortable.css file in the `<head>` section of your HTML file to apply the necessary styles:
 
 ```html
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dinakar2329/Sortable_table.github.io//sortable.css"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dinakar2329/Sortable_table.github.io//sortable.css"> 
 ```
 
 ### 2. Create HTML Table
@@ -48,7 +48,7 @@ Create the HTML table structure in the `<body>` section of your HTML file. Add t
 Include the sortable.js file just before the closing `</body>` tag of your HTML file to add sorting functionality to the table:
 
 ```html
-    <script src="https://cdn.jsdelivr.net/gh/Dinakar2329/Sortable_table/sortable.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Dinakar2329/Sortable_table/sortable.js"></script>
 ```
 
 ### 4. Customize and Populate Table Data
@@ -88,4 +88,3 @@ Here's a basic example of how to use the sortable table in your HTML file:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
