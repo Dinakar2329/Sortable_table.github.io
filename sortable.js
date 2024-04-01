@@ -1,19 +1,12 @@
      document.addEventListener("DOMContentLoaded", function () {
-            console.log("Document loaded");
             const table = document.getElementById("sortable-table");
-            console.log("Table:", table);
             const headers = table.querySelectorAll(".sortable");
-            console.log("Headers:", headers);
 
             headers.forEach(header => {
                 header.addEventListener("click", () => {
-                    console.log("Header clicked");
                     const type = header.getAttribute("data-type");
-                    console.log("Sorting type:", type);
                     const column = header.cellIndex;
-                    console.log("Column index:", column);
                     const rows = Array.from(table.querySelectorAll("tbody tr"));
-                    console.log("Rows:", rows);
                     const ascending = header.getAttribute("data-order") === "asc";
 
                     rows.sort((a, b) => {
