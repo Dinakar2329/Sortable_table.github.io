@@ -70,7 +70,7 @@ Here's a basic example of how to use the sortable table in your HTML file:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sortable Table Example</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dinakar2329/Sortable_table.github.io//sortable.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dinakar2329/Sortable_table.github.io/sortable.css"> 
     <style>
         /* Custom styles can be added here */
     </style>
