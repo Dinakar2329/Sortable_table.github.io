@@ -1,3 +1,7 @@
+        .sortable {
+            cursor: pointer;
+        }
+
         /* Add styles for table headers if needed */
         .sortable::after {
             content: "";
@@ -8,10 +12,19 @@
             border-right: 5px solid transparent;
         }
 
+        /* Up arrow */
         .asc::after {
-            border-bottom: 5px solid;
+            content: '↑';
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+
         }
 
+        /* Down arrow */
         .desc::after {
-            border-top: 5px solid;
+            content: '↓';
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
         }
