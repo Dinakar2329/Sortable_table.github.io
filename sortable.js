@@ -1,5 +1,8 @@
-       document.addEventListener("DOMContentLoaded", function () {
-            const table = document.querySelectorAll("sortable-table");
+// JavaScript code for table sorting
+    document.addEventListener("DOMContentLoaded", function () {
+        const tables = document.querySelectorAll(".sortable-table");
+
+        tables.forEach(table => {
             const headers = table.querySelectorAll(".sortable");
 
             headers.forEach(header => {
@@ -23,10 +26,6 @@
                                 aValue = parseFloat(aValue);
                                 bValue = parseFloat(bValue);
                                 break;
-                            case "date":
-                                aValue = new Date(aValue);
-                                bValue = new Date(bValue);
-                                break;
                             // Add additional cases for other data types as needed
                             default:
                                 break;
@@ -38,17 +37,15 @@
                         }
                     });
 
-                    table.querySelector("tbody").innerHTML = '';
-                    rows.forEach(row => table.querySelector("tbody").appendChild(row));
+                    const tbody = table.querySelector("tbody");
+                    tbody.innerHTML = '';
+                    rows.forEach(row => tbody.appendChild(row));
 
-                    // Toggle the order attribute
                     header.setAttribute("data-order", ascending ? "desc" : "asc");
 
-                    // Remove arrow classes from all headers
                     headers.forEach(header => header.classList.remove("asc", "desc"));
-
-                    // Add arrow class to the clicked header
                     header.classList.add(ascending ? "asc" : "desc");
                 });
             });
         });
+    });
